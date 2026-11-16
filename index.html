@@ -1,0 +1,414 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Raida ♡</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    min-height:100vh;
+    background:
+    radial-gradient(circle at top,#633b79,#251632 55%,#100b1c);
+    color:white;
+    font-family:'Poppins',sans-serif;
+    overflow:hidden;
+}
+
+.stars {
+    position:fixed;
+    inset:0;
+    background-image:
+    radial-gradient(white 1px,transparent 1px),
+    radial-gradient(#ffb8e3 1px,transparent 1px);
+    background-size:60px 60px,100px 100px;
+    background-position:0 0,30px 40px;
+    opacity:.35;
+    pointer-events:none;
+}
+
+.page {
+    display:none;
+    min-height:100vh;
+    width:100%;
+    padding:25px;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    flex-direction:column;
+    position:relative;
+    z-index:2;
+    animation:fade 1s ease;
+}
+
+.page.active {
+    display:flex;
+}
+
+@keyframes fade {
+    from {opacity:0;transform:translateY(20px);}
+    to {opacity:1;transform:translateY(0);}
+}
+
+.card {
+    width:100%;
+    max-width:450px;
+    padding:35px 25px;
+    background:rgba(255,255,255,.09);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:28px;
+    box-shadow:0 10px 60px rgba(0,0,0,.3);
+}
+
+h1 {
+    font-family:'Great Vibes',cursive;
+    font-size:65px;
+    font-weight:normal;
+    color:#ffc4e5;
+    margin-bottom:15px;
+}
+
+h2 {
+    color:#ffe4f4;
+    font-size:19px;
+    font-weight:400;
+    margin-bottom:20px;
+}
+
+p {
+    color:#f9eaf5;
+    font-size:13px;
+    line-height:2;
+}
+
+.compliment {
+    padding:15px;
+    margin:12px 0;
+    background:rgba(255,255,255,.09);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:16px;
+    color:#ffe1f1;
+    font-size:13px;
+    line-height:1.8;
+}
+
+button {
+    margin-top:28px;
+    padding:14px 32px;
+    border:none;
+    border-radius:40px;
+    background:linear-gradient(90deg,#ffadd5,#f4c9ed);
+    color:#43213f;
+    font-size:13px;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 5px 30px rgba(255,170,220,.3);
+    transition:.3s;
+}
+
+button:hover {
+    transform:scale(1.08);
+}
+
+.emoji {
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+#count {
+    font-size:95px;
+    color:#ffc5e6;
+    margin:25px;
+    text-shadow:0 0 30px #ff9bd4;
+}
+
+.cake {
+    font-size:100px;
+    animation:bounce 1.4s infinite;
+    margin:15px;
+}
+
+@keyframes bounce {
+    50% {transform:translateY(-15px);}
+}
+
+.balloon {
+    position:fixed;
+    bottom:-100px;
+    font-size:35px;
+    z-index:10;
+    pointer-events:none;
+    animation:float 8s linear forwards;
+}
+
+@keyframes float {
+    to {
+        transform:translateY(-120vh) rotate(25deg);
+    }
+}
+
+.footer {
+    font-size:10px;
+    opacity:.6;
+    margin-top:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<!-- PAGE 1: COMPLIMENTS -->
+
+<section class="page active" id="page1">
+
+<div class="card">
+
+<div class="emoji">🦋🌷✨</div>
+
+<h1>Hey Raida...</h1>
+
+<h2>A little surprise made just for you ♡</h2>
+
+<p>
+Some people have a beautiful way of making ordinary conversations feel special.
+So, before anything else, here's something I wanted to say.
+</p>
+
+<div class="compliment">
+👀 Your eyes — there's something so captivating about them. They have a beauty that's difficult to put into words.
+</div>
+
+<div class="compliment">
+🌸 Your hair — effortlessly gorgeous, adding an extra touch of elegance to your overall charm.
+</div>
+
+<div class="compliment">
+💗 Your personality — sweet, interesting, and genuinely lovely to get to know.
+</div>
+
+<div class="compliment">
+✨ Your smile — the kind of little detail that can make someone's day brighter.
+</div>
+
+<button onclick="nextPage(2)">
+There's more for you → 
+</button>
+
+<div class="footer">A little website, a little happiness ♡</div>
+
+</div>
+</section>
+
+
+<!-- PAGE 2: LETTER -->
+
+<section class="page" id="page2">
+
+<div class="card">
+
+<div class="emoji">💌🌙</div>
+
+<h1>A Little Letter</h1>
+
+<h2>Something from my side...</h2>
+
+<p>
+It's interesting how life sometimes introduces people unexpectedly.
+
+We haven't met in person, and it's only been a few days of talking, but I've genuinely enjoyed getting to know you.
+
+Sometimes, even a simple conversation can bring a little happiness to an ordinary day.
+
+There's something refreshing about your presence, your way of expressing yourself, and the little things that make you unique.
+
+I don't know where life takes us or what the future holds, but I'm glad we crossed paths.
+
+I wanted to create something a little different for your birthday instead of sending another ordinary birthday paragraph.
+
+I hope this little surprise brings a smile to your face and makes your special day even more memorable.
+
+</p>
+
+<button onclick="nextPage(3)">
+One last surprise awaits → 
+</button>
+
+</div>
+</section>
+
+
+<!-- PAGE 3: COUNTDOWN -->
+
+<section class="page" id="page3">
+
+<div class="card">
+
+<div class="emoji">🌌🎀</div>
+
+<h1>Ready, Raida?</h1>
+
+<h2>Your little surprise is almost here...</h2>
+
+<p>
+Close your eyes for a moment, make a beautiful wish, and get ready!
+</p>
+
+<div id="count">10</div>
+
+<p>Something lovely is coming your way ♡</p>
+
+</div>
+
+</section>
+
+
+<!-- PAGE 4: BIRTHDAY -->
+
+<section class="page" id="page4">
+
+<div class="card">
+
+<div class="emoji">🎉🎀🦋</div>
+
+<h1>Happy Birthday!</h1>
+
+<div class="cake">🎂</div>
+
+<h2>Happy Birthday, Raida! 💗</h2>
+
+<p>
+May Allah bless you with endless happiness, good health, peace, and success.
+
+May every new chapter of your life bring beautiful opportunities, unforgettable memories, and countless reasons to smile.
+
+May your dreams come true, your heart always find peace, and your smile never lose its magic.
+
+Keep shining, keep growing, and keep being the wonderful person you are.
+
+I hope your birthday is as beautiful and special as you deserve.
+
+</p>
+
+<div style="font-size:30px;margin:20px;">
+🎈 🎊 💖 🎀 🌷
+</div>
+
+<h2>Have the most beautiful birthday, Raida! ♡</h2>
+
+<p style="color:#ffc5e6;">
+A little surprise from someone who wishes you nothing but the best.
+</p>
+
+</div>
+
+</section>
+
+
+<script>
+
+function nextPage(number) {
+
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+    });
+
+    document.getElementById('page'+number).classList.add('active');
+
+    if(number === 3) {
+        startCountdown();
+    }
+}
+
+let started = false;
+
+function startCountdown() {
+
+    if(started) return;
+    started = true;
+
+    let n = 10;
+    const counter = document.getElementById('count');
+
+    const timer = setInterval(() => {
+
+        n--;
+        counter.innerText = n;
+
+        if(n === 0) {
+
+            clearInterval(timer);
+
+            setTimeout(() => {
+                nextPage(4);
+                launchSurprise();
+            },800);
+
+        }
+
+    },1000);
+}
+
+
+function launchSurprise() {
+
+    const emojis = ['🎈','💗','🎀','🌸','🦋','✨','🎊'];
+
+    for(let i=0;i<45;i++) {
+
+        let balloon = document.createElement('div');
+
+        balloon.className = 'balloon';
+        balloon.innerText = emojis[Math.floor(Math.random()*emojis.length)];
+
+        balloon.style.left = Math.random()*100+'vw';
+        balloon.style.animationDuration = (5+Math.random()*6)+'s';
+        balloon.style.animationDelay = Math.random()*3+'s';
+
+        document.body.appendChild(balloon);
+
+        setTimeout(() => balloon.remove(),12000);
+    }
+
+    for(let i=0;i<70;i++) {
+
+        let confetti = document.createElement('div');
+
+        confetti.innerText = ['✨','💖','🎊','🌷'][Math.floor(Math.random()*4)];
+
+        confetti.style.position='fixed';
+        confetti.style.left=Math.random()*100+'vw';
+        confetti.style.top='-30px';
+        confetti.style.fontSize='20px';
+        confetti.style.zIndex='15';
+        confetti.style.pointerEvents='none';
+        confetti.style.transition=(3+Math.random()*3)+'s linear';
+
+        document.body.appendChild(confetti);
+
+        setTimeout(() => {
+            confetti.style.transform='translateY(110vh) rotate(700deg)';
+        },50);
+
+        setTimeout(() => confetti.remove(),6500);
+    }
+
+}
+
+</script>
+
+</body>
+</html>
+```
